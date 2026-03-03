@@ -4,14 +4,12 @@ import Link from "next/link";
 import { Hero } from "@/components/hero";
 import { HorizontalScroll } from "@/components/horizontal-scroll";
 import { SectionReveal } from "@/components/section-reveal";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import {
   craftPanels,
   exclusivity,
   hero,
   introduction,
   introductionReverse,
-  journalTeasers,
   quote,
 } from "@/data/homepage";
 
@@ -25,6 +23,17 @@ export default function HomePage() {
   return (
     <>
       <Hero data={hero} />
+
+      <SectionReveal className="full-bleed">
+        <div className="w-full bg-[#D2BEA2] px-4 py-10 text-center md:px-8 md:py-12">
+          <p className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl">
+            A Dialogue in Fabric
+          </p>
+          <p className="mt-3 font-serif text-xl text-[#4A4A4A] md:text-2xl">
+            Conceived in Bahrain, Crafted Across Cultures.
+          </p>
+        </div>
+      </SectionReveal>
 
       <SectionReveal className="outer-padding py-20 md:py-28">
         <div className="mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-2">
@@ -80,11 +89,11 @@ export default function HomePage() {
             />
           </div>
           <div className="space-y-6">
-            <p className="meta-text">Exclusivity & Community</p>
-            <p className="max-w-xl text-lg text-[#4A4A4A]">{exclusivity.body}</p>
+            <p className="meta-text text-[1.2rem]">Exclusivity & Community</p>
+            <p className="max-w-xl text-[1.35rem] text-[#4A4A4A]">{exclusivity.body}</p>
             <Link
               href={exclusivity.cta.href}
-              className="inline-flex border border-[#CBB8A5] px-6 py-3 text-sm uppercase tracking-[0.14em] transition-colors hover:bg-[#CBB8A5] hover:text-[#F6EFE6]"
+              className="inline-flex border border-[#CBB8A5] px-6 py-3 text-[1.05rem] uppercase tracking-[0.14em] transition-colors hover:bg-[#CBB8A5] hover:text-[#F6EFE6]"
             >
               {exclusivity.cta.label}
             </Link>
@@ -92,43 +101,6 @@ export default function HomePage() {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="outer-padding pb-24 md:pb-32">
-        <div className="mx-auto max-w-[1400px]">
-          <div className="mb-8 flex items-end justify-between">
-            <h2 className="section-heading">Latest from the Journal</h2>
-            <Link
-              href="/journal"
-              className="text-sm uppercase tracking-[0.12em] text-[#4A4A4A] underline-offset-4 transition-colors hover:text-[#1A1A1A] hover:underline"
-            >
-              Read More
-            </Link>
-          </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            {journalTeasers.map((item) => (
-              <Card key={item.title}>
-                <div className="relative h-[18rem] overflow-hidden border border-[#E5DCD3]">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="pt-4">
-                  <CardTitle className="font-serif text-2xl">{item.title}</CardTitle>
-                  <Link
-                    href={item.href}
-                    className="mt-3 inline-block text-sm uppercase tracking-[0.12em] text-[#4A4A4A] underline-offset-4 hover:underline"
-                  >
-                    Read more
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </SectionReveal>
     </>
   );
 }

@@ -7,7 +7,7 @@ export const introduction = {
   image: "/images/intro-man-15.png",
   heading:
     "“There are garments that follow trends. And there are garments that carry memory.”",
-  body: "Tarakeeb was created as a quiet response to fast fashion. Each silhouette is designed with restraint and intention, drawing from Bahraini poise and artisanal traditions across the region. Fabrics are selected for touch, drape, and longevity, so every piece feels personal long after the season changes.",
+  body: "Tarakeeb was conceived in Bahrain — shaped by its cultural depth, its artisans, and its enduring heritage. It was born from a belief that clothing should feel honest: natural in fabric, thoughtful in construction, and timeless in silhouette.",
 };
 
 export const introductionReverse = {
@@ -23,7 +23,7 @@ export const craftPanels = [
     caption: "A living technique shaped by rhythm, patience, and inherited skill.",
   },
   {
-    image: "/images/embroidery-18-1.png",
+    image: "/images/embroidery-19.png",
     title: "Hand Embroidery",
     caption: "Precise threadwork that turns surface into story.",
   },
@@ -37,7 +37,7 @@ export const craftPanels = [
 export const quote = "In a world of excess, Tarakeeb chooses intention.";
 
 export const exclusivity = {
-  image: "/images/editorial-portrait.svg",
+  image: "/images/exclusivity-20.jpeg",
   body: "Ready-to-wear pieces are released in limited numbers — no more than three per design and colour — preserving exclusivity and personal connection. Select collections are entirely hand embroidered and created as singular works.",
   cta: {
     label: "Discover the Collection",
