@@ -53,10 +53,10 @@ export default function HomePage() {
           <div className="relative h-[60vh] min-h-[420px] overflow-hidden border border-[#E5DCD3]">
             <Image
               src={introductionReverse.image}
-              alt="Artisan loom detail"
+              alt="Embroidered velvet cuff detail"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover object-center"
             />
           </div>
         </div>

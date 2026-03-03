@@ -11,24 +11,24 @@ export const introduction = {
 };
 
 export const introductionReverse = {
-  image: "/images/craft-loom.svg",
+  image: "/images/frame-16.png",
   heading: "“Craft begins in the hand. Elegance is completed in the final stitch.”",
   body: "From loom to atelier, each stage is guided by artisanship and precision. Tarakeeb pieces are developed slowly, allowing texture, proportion, and finish to come together with quiet confidence.",
 };
 
 export const craftPanels = [
   {
-    image: "/images/loom.svg",
+    image: "/images/loom-17.png",
     title: "Hand-weaving in Bani Jamra",
     caption: "A living technique shaped by rhythm, patience, and inherited skill.",
   },
   {
-    image: "/images/embroidery-macro.svg",
+    image: "/images/embroidery-18-1.png",
     title: "Hand Embroidery",
     caption: "Precise threadwork that turns surface into story.",
   },
   {
-    image: "/images/cuff-detail.svg",
+    image: "/images/signature-19.png",
     title: "Signature Finishes",
     caption: "Subtle cuffs and seams that reveal the hand behind the garment.",
   },

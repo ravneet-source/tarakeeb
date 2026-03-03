@@ -51,8 +51,8 @@ export function HorizontalScroll({ panels }: HorizontalScrollProps) {
                 <Image src={panel.image} alt={panel.title} fill sizes="80vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(26,26,26,0.58)] via-transparent to-transparent" />
                 <div className="absolute bottom-0 p-8 text-[#F6EFE6]">
-                  <p className="text-sm uppercase tracking-[0.2em]">{panel.title}</p>
-                  <p className="mt-3 max-w-md text-sm text-[#F1E8DD]">{panel.caption}</p>
+                  <p className="text-[1.75rem] uppercase tracking-[0.12em] leading-tight">{panel.title}</p>
+                  <p className="mt-3 max-w-md text-[1.75rem] leading-tight text-[#F1E8DD]">{panel.caption}</p>
                 </div>
               </article>
             ))}
