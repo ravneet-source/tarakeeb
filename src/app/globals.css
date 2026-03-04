@@ -25,7 +25,7 @@
 
 :root {
   --radius: 0.15rem;
-  --background: #fdfbf7;
+  --background: #f3eae0;
   --foreground: #1a1a1a;
   --primary: #1a1a1a;
   --primary-foreground: #f6efe6;
@@ -63,6 +63,12 @@
 
   body[data-locale="ar"] {
     font-family: var(--font-arabic), "Segoe UI", Tahoma, sans-serif;
+  }
+
+  html.needle-cursor-active,
+  html.needle-cursor-active body,
+  html.needle-cursor-active * {
+    cursor: none !important;
   }
 
   h1,

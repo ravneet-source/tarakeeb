@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Footer } from "@/components/footer";
 import { MotionProvider } from "@/components/motion-provider";
+import { NeedleCursor } from "@/components/needle-cursor";
 import { Navbar } from "@/components/navbar";
 import { LanguageProvider } from "@/lib/context/language-context";
 import "./globals.css";
@@ -34,6 +35,7 @@ export default function RootLayout({
               <Navbar />
               <main className="pt-20">{children}</main>
               <Footer />
+              <NeedleCursor />
             </div>
           </MotionProvider>
         </LanguageProvider>

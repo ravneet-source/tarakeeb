@@ -14,9 +14,9 @@ export default function LookbookPage() {
     <section className="outer-padding py-20 md:py-28">
       <SectionReveal className="mx-auto mb-14 max-w-[1400px]">
         <p className="meta-text">Lookbook</p>
-        <h1 className="section-heading mt-4 max-w-5xl">A Curated Sequence of Signature Looks</h1>
-        <p className="mt-5 max-w-3xl text-lg text-[#4A4A4A]">
-          Every frame captures fabric, movement, and finish with editorial clarity.
+        <h1 className="section-heading mt-4 max-w-5xl">Collections Catalogue</h1>
+        <p className="mt-5 max-w-full font-serif text-[1.35rem] leading-[1.6] text-[#4A4A4A] md:whitespace-nowrap">
+          A curated set of Tarakeeb collections. Select a catalogue to open and view the full fashion line.
         </p>
       </SectionReveal>
 

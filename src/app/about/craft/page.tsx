@@ -13,9 +13,9 @@ export default function CraftPage() {
   return (
     <section className="outer-padding py-20 md:py-28">
       <SectionReveal className="mx-auto max-w-[1400px] border-b border-[#E5DCD3] pb-12">
-        <p className="meta-text">Craft & Process</p>
+        <p className="meta-text font-bold">Craft & Process</p>
         <h1 className="section-heading mt-4 max-w-4xl">Where Heritage Meets Modern Form</h1>
-        <p className="mt-5 max-w-3xl text-lg text-[#4A4A4A]">{craftIntro}</p>
+        <p className="mt-5 max-w-3xl whitespace-pre-line text-lg text-[#4A4A4A]">{craftIntro}</p>
       </SectionReveal>
 
       <div className="mx-auto max-w-[1400px]">

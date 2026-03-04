@@ -1,76 +1,105 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
-import { Lightbox } from "@/components/lightbox";
+import { AnimatePresence, motion } from "framer-motion";
+import { useMemo, useState } from "react";
 import type { LookbookItem } from "@/data/lookbook";
-import { cn } from "@/lib/utils";
 
 type LookbookGridProps = {
   items: LookbookItem[];
 };
 
+function fileNameFromPath(path: string) {
+  const base = path.split("/").pop() || path;
+  return base.replace(/\.pdf$/i, "");
+}
+
 export function LookbookGrid({ items }: LookbookGridProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  const normalized = useMemo(
+    () =>
+      items.map((item) => ({
+        ...item,
+        label: item.title?.trim() || fileNameFromPath(item.file),
+      })),
+    [items],
+  );
+
+  if (!normalized.length) {
+    return (
+      <div className="rounded-none border border-dashed border-[#CBB8A5] bg-[#F6EFE6] p-10 text-center">
+        <p className="font-serif text-3xl text-[#1A1A1A]">No Catalog PDFs Added Yet</p>
+        <p className="mt-3 text-lg text-[#4A4A4A]">
+          Add PDFs to <code>public/lookbooks</code>, then list them in <code>src/data/lookbook.ts</code>.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {items.map((item, index) => (
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {normalized.map((item, index) => (
           <motion.button
-            key={item.title}
+            key={item.file}
             type="button"
-            className={cn(
-              "group relative overflow-hidden border border-[#E5DCD3] text-start",
-              item.layout === "large" && "md:col-span-2 md:row-span-2",
-            )}
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.65, ease: "easeOut" }}
             onClick={() => setActiveIndex(index)}
+            whileHover={{ y: -4 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="group overflow-hidden border border-[#DCCBB8] bg-[#F8F2EA] text-left"
           >
-            <div
-              className={cn(
-                "relative w-full",
-                item.layout === "large" && "h-[36rem]",
-                item.layout === "medium" && "h-[28rem]",
-                item.layout === "small" && "h-[22rem]",
-              )}
-            >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+            <div className="relative h-[24rem] w-full overflow-hidden border-b border-[#DCCBB8] bg-[#EFE6DA]">
+              <iframe
+                title={`${item.label} preview`}
+                src={`${item.file}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
+                className="pointer-events-none h-full w-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(26,26,26,0.58)] via-[rgba(26,26,26,0)] to-[rgba(26,26,26,0)] opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
-              <div className="absolute bottom-0 p-5 text-[#F6EFE6] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                <p className="font-serif text-xl">{item.title}</p>
-                <p className="meta-text mt-1 !text-[#DCCBB8]">{item.fabric}</p>
-              </div>
+            </div>
+            <div className="p-4">
+              <p className="font-serif text-2xl font-semibold text-[#1A1A1A]">{item.label}</p>
             </div>
           </motion.button>
         ))}
       </div>
 
-      <Lightbox
-        items={items}
-        activeIndex={activeIndex}
-        onClose={() => setActiveIndex(null)}
-        onPrevious={() => {
-          setActiveIndex((current) => {
-            if (current === null) return 0;
-            return current === 0 ? items.length - 1 : current - 1;
-          });
-        }}
-        onNext={() => {
-          setActiveIndex((current) => {
-            if (current === null) return 0;
-            return current === items.length - 1 ? 0 : current + 1;
-          });
-        }}
-      />
+      <AnimatePresence>
+        {activeIndex !== null ? (
+          <motion.div
+            className="fixed inset-0 z-[80] bg-[rgba(20,16,13,0.78)] p-4 md:p-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveIndex(null)}
+          >
+            <motion.div
+              className="mx-auto flex h-full w-full max-w-[1400px] flex-col border border-[#DCCBB8] bg-[#F6EFE6]"
+              initial={{ y: 24, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 24, opacity: 0 }}
+              transition={{ duration: 0.28, ease: "easeOut" }}
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="flex items-center justify-between border-b border-[#DCCBB8] px-4 py-3 md:px-6">
+                <p className="font-serif text-2xl text-[#1A1A1A]">{normalized[activeIndex].label}</p>
+                <button
+                  type="button"
+                  onClick={() => setActiveIndex(null)}
+                  className="border border-[#CBB8A5] px-4 py-2 text-sm uppercase tracking-[0.14em] text-[#1A1A1A]"
+                >
+                  Close
+                </button>
+              </div>
+              <div className="h-full min-h-0 p-2 md:p-4">
+                <iframe
+                  title={`${normalized[activeIndex].label} catalog`}
+                  src={`${normalized[activeIndex].file}#page=1&view=FitH`}
+                  className="h-full w-full border border-[#DCCBB8] bg-white"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </>
   );
 }

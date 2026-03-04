@@ -7,13 +7,18 @@ export const introduction = {
   image: "/images/intro-man-15.png",
   heading:
     "“There are garments that follow trends. And there are garments that carry memory.”",
-  body: "Tarakeeb was conceived in Bahrain — shaped by its cultural depth, its artisans, and its enduring heritage. It was born from a belief that clothing should feel honest: natural in fabric, thoughtful in construction, and timeless in silhouette.",
+  body: `Tarakeeb was conceived in Bahrain — shaped by its cultural depth, its artisans, and its enduring heritage. It was born from a belief that clothing should feel honest: natural in fabric, thoughtful in construction, and timeless in silhouette.
+
+Each piece begins with pure textiles and evolves through hand weaving and hand embroidery. Some fabrics are woven in Bahrain, honouring traditional techniques such as those of Bani Jamra; others are carefully sourced and enriched through artisanal craftsmanship across regions.`,
 };
 
 export const introductionReverse = {
   image: "/images/frame-16.png",
-  heading: "“Craft begins in the hand. Elegance is completed in the final stitch.”",
-  body: "From loom to atelier, each stage is guided by artisanship and precision. Tarakeeb pieces are developed slowly, allowing texture, proportion, and finish to come together with quiet confidence.",
+  heading: `“Tarakeeb is not simply about design.
+It is about dialogue.”`,
+  body: `Between craft and culture.
+Between tradition and contemporary expression.
+Between the hands that create and the women who wear.`,
 };
 
 export const craftPanels = [
@@ -34,11 +39,15 @@ export const craftPanels = [
   },
 ];
 
-export const quote = "In a world of excess, Tarakeeb chooses intention.";
+export const quote = "“In a world of excess, Tarakeeb chooses intention.”";
 
 export const exclusivity = {
-  image: "/images/exclusivity-20.jpeg",
-  body: "Ready-to-wear pieces are released in limited numbers — no more than three per design and colour — preserving exclusivity and personal connection. Select collections are entirely hand embroidered and created as singular works.",
+  image: "/images/blue-dress-2.png",
+  body: `Ready-to-wear pieces are released in limited numbers — no more than three per design and colour — preserving exclusivity and personal connection.
+
+Select collections are entirely hand embroidered and created as singular works.
+
+Made-to-order allows each garment to be shaped with care, ensuring individuality remains at the heart of every creation.`,
   cta: {
     label: "Discover the Collection",
     href: "/lookbook",

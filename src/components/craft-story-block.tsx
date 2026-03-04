@@ -26,7 +26,7 @@ export function CraftStoryBlock({ title, text, image, reverse }: CraftStoryBlock
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="space-y-4"
       >
-        <p className="meta-text">{title}</p>
+        <p className="meta-text font-bold">{title}</p>
         <p className="text-xl text-[#4A4A4A]">{text}</p>
       </motion.div>
       <motion.div

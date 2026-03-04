@@ -25,7 +25,7 @@ export default function HomePage() {
       <Hero data={hero} />
 
       <SectionReveal className="full-bleed">
-        <div className="w-full bg-[#D2BEA2] px-4 py-10 text-center md:px-8 md:py-12">
+        <div className="w-full bg-[#DBC2AD] px-4 py-[3.25rem] text-center md:px-8 md:py-[3.9rem]">
           <p className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl">
             A Dialogue in Fabric
           </p>
@@ -48,7 +48,7 @@ export default function HomePage() {
           </div>
           <div className="space-y-5">
             <h2 className="section-heading max-w-2xl">{introduction.heading}</h2>
-            <p className="max-w-xl text-[#4A4A4A]">{introduction.body}</p>
+            <p className="max-w-xl whitespace-pre-line text-[#4A4A4A]">{introduction.body}</p>
           </div>
         </div>
       </SectionReveal>
@@ -56,8 +56,14 @@ export default function HomePage() {
       <SectionReveal className="outer-padding pb-20 md:pb-28">
         <div className="mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-2">
           <div className="space-y-5">
-            <h2 className="section-heading max-w-2xl">{introductionReverse.heading}</h2>
-            <p className="max-w-xl text-[#4A4A4A]">{introductionReverse.body}</p>
+            <h2 className="max-w-3xl font-serif text-[clamp(2.25rem,4.2vw,3.7rem)] leading-[1.08]">
+              {introductionReverse.heading.split("\n").map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </h2>
+            <p className="max-w-xl whitespace-pre-line text-[#4A4A4A]">{introductionReverse.body}</p>
           </div>
           <div className="relative h-[60vh] min-h-[420px] overflow-hidden border border-[#E5DCD3]">
             <Image
@@ -71,15 +77,18 @@ export default function HomePage() {
         </div>
       </SectionReveal>
 
-      <HorizontalScroll panels={craftPanels} />
-
-      <SectionReveal className="outer-padding py-24 text-center md:py-32">
-        <p className="mx-auto max-w-4xl font-serif text-4xl leading-tight md:text-6xl">{quote}</p>
+      <SectionReveal className="full-bleed">
+        <div className="w-full bg-[#DBC2AD] px-4 py-[3.25rem] text-center md:px-8 md:py-[3.9rem]">
+          <p className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl">
+            Our Philosophy
+          </p>
+          <p className="mt-3 font-serif text-xl text-[#4A4A4A] md:text-2xl">{quote}</p>
+        </div>
       </SectionReveal>
 
-      <SectionReveal className="outer-padding pb-24 md:pb-32">
+      <SectionReveal className="outer-padding pt-12 pb-24 md:pb-32">
         <div className="mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-2">
-          <div className="relative h-[64vh] min-h-[430px] overflow-hidden border border-[#E5DCD3]">
+          <div className="relative overflow-hidden border border-[#E5DCD3]" style={{ aspectRatio: "786 / 1086" }}>
             <Image
               src={exclusivity.image}
               alt="Tarakeeb editorial portrait"
@@ -90,7 +99,9 @@ export default function HomePage() {
           </div>
           <div className="space-y-6">
             <p className="meta-text text-[1.2rem]">Exclusivity & Community</p>
-            <p className="max-w-xl text-[1.35rem] text-[#4A4A4A]">{exclusivity.body}</p>
+            <p className="max-w-xl whitespace-pre-line text-[1.35rem] text-[#4A4A4A]">
+              {exclusivity.body}
+            </p>
             <Link
               href={exclusivity.cta.href}
               className="inline-flex border border-[#CBB8A5] px-6 py-3 text-[1.05rem] uppercase tracking-[0.14em] transition-colors hover:bg-[#CBB8A5] hover:text-[#F6EFE6]"
@@ -98,6 +109,37 @@ export default function HomePage() {
               {exclusivity.cta.label}
             </Link>
           </div>
+        </div>
+      </SectionReveal>
+
+      <SectionReveal className="full-bleed">
+        <div className="w-full bg-[#DBC2AD] px-4 py-[3.25rem] text-center md:px-8 md:py-[3.9rem]">
+          <p className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl">
+            Our Craft
+          </p>
+          <p className="mt-3 whitespace-pre-line font-serif text-xl text-[#4A4A4A] md:text-2xl">
+            {`Woven in Bahrain.
+Sourced with integrity.
+Embroidered by hand.
+
+What begins in one place is enriched in another.
+The result is a garment that feels international, yet deeply grounded.`}
+          </p>
+        </div>
+      </SectionReveal>
+
+      <HorizontalScroll panels={craftPanels} />
+
+      <SectionReveal className="full-bleed">
+        <div className="w-full bg-[#DBC2AD] px-4 py-[3.25rem] text-center md:px-8 md:py-[3.9rem]">
+          <p className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl">
+            Tarakeeb is a quiet statement —
+          </p>
+          <p className="mt-3 whitespace-pre-line font-serif text-xl text-[#4A4A4A] md:text-2xl">
+            {`that elegance need not be loud,
+that heritage deserves continuity,
+and that true luxury is found in restraint.`}
+          </p>
         </div>
       </SectionReveal>
 

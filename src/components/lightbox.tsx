@@ -4,10 +4,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
-import type { LookbookItem } from "@/data/lookbook";
+
+type LightboxItem = {
+  title: string;
+  fabric: string;
+  image: string;
+};
 
 type LightboxProps = {
-  items: LookbookItem[];
+  items: LightboxItem[];
   activeIndex: number | null;
   onClose: () => void;
   onPrevious: () => void;

@@ -1,57 +1,15 @@
 export type LookbookItem = {
-  title: string;
-  fabric: string;
-  image: string;
-  layout: "large" | "medium" | "small";
+  file: string;
+  title?: string;
 };
 
+// Add your catalog PDFs under /public/lookbooks and list them here.
+// Example: /public/lookbooks/Resort-2026.pdf -> file: "/lookbooks/Resort-2026.pdf"
 export const lookbookItems: LookbookItem[] = [
-  {
-    title: "Signature Editorial Look",
-    fabric: "Handwoven cotton-silk",
-    image: "/images/lookbook-1.svg",
-    layout: "large",
-  },
-  {
-    title: "Strong Silhouette Piece",
-    fabric: "Structured linen blend",
-    image: "/images/lookbook-2.svg",
-    layout: "medium",
-  },
-  {
-    title: "Embroidered Detail",
-    fabric: "Threaded organza",
-    image: "/images/lookbook-3.svg",
-    layout: "small",
-  },
-  {
-    title: "Woven Textile Garment",
-    fabric: "Bani Jamra weave",
-    image: "/images/lookbook-4.svg",
-    layout: "medium",
-  },
-  {
-    title: "Jewel Tone Look",
-    fabric: "Silk crepe",
-    image: "/images/lookbook-5.svg",
-    layout: "medium",
-  },
-  {
-    title: "Neutral Soft Look",
-    fabric: "Matte tencel",
-    image: "/images/lookbook-6.svg",
-    layout: "small",
-  },
-  {
-    title: "Texture Study",
-    fabric: "Hand-finished jacquard",
-    image: "/images/lookbook-7.svg",
-    layout: "small",
-  },
-  {
-    title: "Movement Portrait",
-    fabric: "Fluid wool-silk",
-    image: "/images/lookbook-8.svg",
-    layout: "large",
-  },
+  { file: "/lookbooks/Aaliyah.pdf" },
+  { file: "/lookbooks/Naya.pdf" },
+  { file: "/lookbooks/Conversations.pdf" },
+  { file: "/lookbooks/Legacy of Craft.pdf" },
+  { file: "/lookbooks/Be Bahrain.pdf" },
+  { file: "/lookbooks/Ramadan & Beyond.pdf" },
 ];
