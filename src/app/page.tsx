@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/hero";
 import { HorizontalScroll } from "@/components/horizontal-scroll";
+import { LocalizedLines, LocalizedText } from "@/components/localized-text";
 import { SectionReveal } from "@/components/section-reveal";
+import type { LocalizedString } from "@/lib/i18n";
 import {
   craftPanels,
   exclusivity,
@@ -19,6 +21,57 @@ export const metadata: Metadata = {
     "Tarakeeb's editorial homepage exploring Bahraini craft, natural fabrics, and limited-edition artisanal garments.",
 };
 
+const dialogueBlock = {
+  title: {
+    en: "A Dialogue in Fabric",
+    ar: "حوار في النسيج",
+  } satisfies LocalizedString,
+  subtitle: {
+    en: "Conceived in Bahrain, Crafted Across Cultures.",
+    ar: "وُلد في البحرين، وتشكّل عبر ثقافات متعددة.",
+  } satisfies LocalizedString,
+};
+
+const philosophyBlockTitle = {
+  en: "Our Philosophy",
+  ar: "فلسفتنا",
+} satisfies LocalizedString;
+
+const craftBlock = {
+  title: {
+    en: "Our Craft",
+    ar: "حرفتنا",
+  } satisfies LocalizedString,
+  body: {
+    en: `Woven in Bahrain.
+Sourced with integrity.
+Embroidered by hand.
+
+"What Begins in one place is enriched in another.
+The Result is a garment that feels international, yet deeply grounded."`,
+    ar: `منسوج في البحرين.
+منتقى بنزاهة.
+ومطرّز يدويًا.
+
+ما يبدأ في مكان يزداد قيمة في مكان آخر.
+والنتيجة قطعة بروح عالمية وجذور راسخة.`,
+  } satisfies LocalizedString,
+};
+
+const statementBlock = {
+  title: {
+    en: "Tarakeeb is a Quiet Statement",
+    ar: "تركيب رسالة هادئة —",
+  } satisfies LocalizedString,
+  body: {
+    en: `"Elegance need not be loud, and heritage deserves continuity.
+True luxury is found in restraint."`,
+    ar: `أن الأناقة لا تحتاج صخبًا،
+وأن الإرث يستحق الاستمرارية،
+وأن الفخامة الحقيقية تكمن في الرصانة.`,
+  } satisfies LocalizedString,
+};
+
 export default function HomePage() {
   return (
     <>
@@ -26,12 +79,16 @@ export default function HomePage() {
 
       <SectionReveal className="full-bleed">
         <div className="w-full bg-[#DBC2AD] px-4 py-[3.25rem] text-center md:px-8 md:py-[3.9rem]">
-          <p className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl">
-            A Dialogue in Fabric
-          </p>
-          <p className="mt-3 font-serif text-xl text-[#4A4A4A] md:text-2xl">
-            Conceived in Bahrain, Crafted Across Cultures.
-          </p>
+          <LocalizedText
+            text={dialogueBlock.title}
+            as="p"
+            className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl"
+          />
+          <LocalizedText
+            text={dialogueBlock.subtitle}
+            as="p"
+            className="mt-3 font-serif text-xl text-[#4A4A4A] md:text-2xl"
+          />
         </div>
       </SectionReveal>
 
@@ -47,8 +104,12 @@ export default function HomePage() {
             />
           </div>
           <div className="space-y-5">
-            <h2 className="section-heading max-w-2xl">{introduction.heading}</h2>
-            <p className="max-w-xl whitespace-pre-line text-[#4A4A4A]">{introduction.body}</p>
+            <LocalizedText text={introduction.heading} as="h2" className="section-heading max-w-2xl" />
+            <LocalizedText
+              text={introduction.body}
+              as="p"
+              className="max-w-xl whitespace-pre-line text-[1.45rem] leading-[1.6] md:text-[1.6rem] text-[#4A4A4A]"
+            />
           </div>
         </div>
       </SectionReveal>
@@ -56,14 +117,16 @@ export default function HomePage() {
       <SectionReveal className="outer-padding pb-20 md:pb-28">
         <div className="mx-auto grid max-w-[1400px] items-center gap-10 lg:grid-cols-2">
           <div className="space-y-5">
-            <h2 className="max-w-3xl font-serif text-[clamp(2.25rem,4.2vw,3.7rem)] leading-[1.08]">
-              {introductionReverse.heading.split("\n").map((line) => (
-                <span key={line} className="block">
-                  {line}
-                </span>
-              ))}
-            </h2>
-            <p className="max-w-xl whitespace-pre-line text-[#4A4A4A]">{introductionReverse.body}</p>
+            <LocalizedLines
+              text={introductionReverse.heading}
+              as="h2"
+              className="max-w-3xl font-serif text-[clamp(2.25rem,4.2vw,3.7rem)] leading-[1.08]"
+            />
+            <LocalizedText
+              text={introductionReverse.body}
+              as="p"
+              className="max-w-xl whitespace-pre-line text-[1.45rem] leading-[1.6] md:text-[1.6rem] text-[#4A4A4A]"
+            />
           </div>
           <div className="relative h-[60vh] min-h-[420px] overflow-hidden border border-[#E5DCD3]">
             <Image
@@ -79,10 +142,12 @@ export default function HomePage() {
 
       <SectionReveal className="full-bleed">
         <div className="w-full bg-[#DBC2AD] px-4 py-[3.25rem] text-center md:px-8 md:py-[3.9rem]">
-          <p className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl">
-            Our Philosophy
-          </p>
-          <p className="mt-3 font-serif text-xl text-[#4A4A4A] md:text-2xl">{quote}</p>
+          <LocalizedText
+            text={philosophyBlockTitle}
+            as="p"
+            className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl"
+          />
+          <LocalizedText text={quote} as="p" className="mt-3 font-serif text-xl text-[#4A4A4A] md:text-2xl" />
         </div>
       </SectionReveal>
 
@@ -98,15 +163,21 @@ export default function HomePage() {
             />
           </div>
           <div className="space-y-6">
-            <p className="meta-text text-[1.2rem]">Exclusivity & Community</p>
-            <p className="max-w-xl whitespace-pre-line text-[1.35rem] text-[#4A4A4A]">
-              {exclusivity.body}
-            </p>
+            <LocalizedText
+              text={{ en: "Exclusivity & Community", ar: "الخصوصية والمجتمع" }}
+              as="p"
+              className="meta-text text-[1.35rem] font-semibold"
+            />
+            <LocalizedText
+              text={exclusivity.body}
+              as="p"
+              className="max-w-xl whitespace-pre-line text-[1.35rem] text-[#4A4A4A]"
+            />
             <Link
               href={exclusivity.cta.href}
               className="inline-flex border border-[#CBB8A5] px-6 py-3 text-[1.05rem] uppercase tracking-[0.14em] transition-colors hover:bg-[#CBB8A5] hover:text-[#F6EFE6]"
             >
-              {exclusivity.cta.label}
+              <LocalizedText text={exclusivity.cta.label} />
             </Link>
           </div>
         </div>
@@ -114,17 +185,16 @@ export default function HomePage() {
 
       <SectionReveal className="full-bleed">
         <div className="w-full bg-[#DBC2AD] px-4 py-[3.25rem] text-center md:px-8 md:py-[3.9rem]">
-          <p className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl">
-            Our Craft
-          </p>
-          <p className="mt-3 whitespace-pre-line font-serif text-xl text-[#4A4A4A] md:text-2xl">
-            {`Woven in Bahrain.
-Sourced with integrity.
-Embroidered by hand.
-
-What begins in one place is enriched in another.
-The result is a garment that feels international, yet deeply grounded.`}
-          </p>
+          <LocalizedText
+            text={craftBlock.title}
+            as="p"
+            className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl"
+          />
+          <LocalizedText
+            text={craftBlock.body}
+            as="p"
+            className="mt-3 whitespace-pre-line font-serif text-xl text-[#4A4A4A] md:text-2xl"
+          />
         </div>
       </SectionReveal>
 
@@ -132,14 +202,16 @@ The result is a garment that feels international, yet deeply grounded.`}
 
       <SectionReveal className="full-bleed">
         <div className="w-full bg-[#DBC2AD] px-4 py-[3.25rem] text-center md:px-8 md:py-[3.9rem]">
-          <p className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl">
-            Tarakeeb is a quiet statement —
-          </p>
-          <p className="mt-3 whitespace-pre-line font-serif text-xl text-[#4A4A4A] md:text-2xl">
-            {`that elegance need not be loud,
-that heritage deserves continuity,
-and that true luxury is found in restraint.`}
-          </p>
+          <LocalizedText
+            text={statementBlock.title}
+            as="p"
+            className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl"
+          />
+          <LocalizedText
+            text={statementBlock.body}
+            as="p"
+            className="mt-3 whitespace-pre-line font-serif text-xl text-[#4A4A4A] md:text-2xl"
+          />
         </div>
       </SectionReveal>
 

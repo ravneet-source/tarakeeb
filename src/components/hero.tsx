@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { useLanguage } from "@/lib/context/language-context";
 
 type HeroProps = {
   data: {
@@ -13,6 +14,7 @@ type HeroProps = {
 };
 
 export function Hero({ data }: HeroProps) {
+  const { locale } = useLanguage();
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 700], [1.08, 1]);
   const [videoFailed, setVideoFailed] = useState(false);
@@ -35,7 +37,7 @@ export function Hero({ data }: HeroProps) {
         ) : (
           <Image
             src={data.poster}
-            alt="Tarakeeb hero editorial frame"
+            alt={locale === "ar" ? "صورة رئيسية تحريرية من تركيب" : "Tarakeeb hero editorial frame"}
             fill
             priority
             sizes="100vw"
@@ -57,7 +59,7 @@ export function Hero({ data }: HeroProps) {
         animate={{ opacity: [0.3, 1, 0.3], y: [0, 4, 0] }}
         transition={{ duration: 2.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
       >
-        Scroll
+        {locale === "ar" ? "مرّر" : "Scroll"}
       </motion.div>
     </section>
   );

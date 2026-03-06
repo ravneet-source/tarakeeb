@@ -1,6 +1,7 @@
 export type LookbookItem = {
   file: string;
   title?: string;
+  cover?: string;
 };
 
 // Add your catalog PDFs under /public/lookbooks and list them here.

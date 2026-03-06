@@ -1,8 +1,10 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useLocaleText } from "@/components/localized-text";
 import type { LookbookItem } from "@/data/lookbook";
+import type { LocalizedString } from "@/lib/i18n";
 
 type LookbookGridProps = {
   items: LookbookItem[];
@@ -13,7 +15,14 @@ function fileNameFromPath(path: string) {
   return base.replace(/\.pdf$/i, "");
 }
 
+function buildCoverPath(item: LookbookItem) {
+  if (item.cover) return item.cover;
+  const fileName = fileNameFromPath(item.file);
+  return `/lookbooks/covers/${fileName}.png`;
+}
+
 export function LookbookGrid({ items }: LookbookGridProps) {
+  const t = useLocaleText();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const normalized = useMemo(
@@ -21,16 +30,37 @@ export function LookbookGrid({ items }: LookbookGridProps) {
       items.map((item) => ({
         ...item,
         label: item.title?.trim() || fileNameFromPath(item.file),
+        coverSrc: encodeURI(buildCoverPath(item)),
+        fileSrc: encodeURI(item.file),
       })),
     [items],
   );
 
+  useEffect(() => {
+    if (activeIndex === null) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setActiveIndex(null);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [activeIndex]);
+
   if (!normalized.length) {
     return (
       <div className="rounded-none border border-dashed border-[#CBB8A5] bg-[#F6EFE6] p-10 text-center">
-        <p className="font-serif text-3xl text-[#1A1A1A]">No Catalog PDFs Added Yet</p>
+        <p className="font-serif text-3xl text-[#1A1A1A]">
+          {t({
+            en: "No Catalog PDFs Added Yet",
+            ar: "لم تتم إضافة ملفات كتالوج بعد",
+          } satisfies LocalizedString)}
+        </p>
         <p className="mt-3 text-lg text-[#4A4A4A]">
-          Add PDFs to <code>public/lookbooks</code>, then list them in <code>src/data/lookbook.ts</code>.
+          {t({
+            en: "Add PDFs to public/lookbooks, then list them in src/data/lookbook.ts.",
+            ar: "أضف ملفات PDF داخل public/lookbooks ثم أدرجها في src/data/lookbook.ts.",
+          } satisfies LocalizedString)}
         </p>
       </div>
     );
@@ -48,15 +78,19 @@ export function LookbookGrid({ items }: LookbookGridProps) {
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="group overflow-hidden border border-[#DCCBB8] bg-[#F8F2EA] text-left"
           >
-            <div className="relative h-[24rem] w-full overflow-hidden border-b border-[#DCCBB8] bg-[#EFE6DA]">
-              <iframe
-                title={`${item.label} preview`}
-                src={`${item.file}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
-                className="pointer-events-none h-full w-full"
+            <div className="relative h-[24rem] w-full overflow-hidden border-b border-[#DCCBB8] bg-[#EFE6DA] p-2">
+              <img
+                src={item.coverSrc}
+                alt={`${item.label} cover`}
+                loading="lazy"
+                className="h-full w-full object-contain object-top transition-transform duration-500 group-hover:scale-[1.01]"
               />
             </div>
             <div className="p-4">
               <p className="font-serif text-2xl font-semibold text-[#1A1A1A]">{item.label}</p>
+              <p className="meta-text mt-2">
+                {t({ en: "Open Catalogue", ar: "افتح الكتالوج" } satisfies LocalizedString)}
+              </p>
             </div>
           </motion.button>
         ))}
@@ -81,18 +115,27 @@ export function LookbookGrid({ items }: LookbookGridProps) {
             >
               <div className="flex items-center justify-between border-b border-[#DCCBB8] px-4 py-3 md:px-6">
                 <p className="font-serif text-2xl text-[#1A1A1A]">{normalized[activeIndex].label}</p>
-                <button
-                  type="button"
-                  onClick={() => setActiveIndex(null)}
-                  className="border border-[#CBB8A5] px-4 py-2 text-sm uppercase tracking-[0.14em] text-[#1A1A1A]"
-                >
-                  Close
-                </button>
+                <div className="flex items-center gap-3">
+                  <a
+                    href={normalized[activeIndex].fileSrc}
+                    download
+                    className="border border-[#CBB8A5] px-4 py-2 text-sm uppercase tracking-[0.14em] text-[#1A1A1A]"
+                  >
+                    {t({ en: "Download", ar: "تحميل" } satisfies LocalizedString)}
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => setActiveIndex(null)}
+                    className="border border-[#CBB8A5] px-4 py-2 text-sm uppercase tracking-[0.14em] text-[#1A1A1A]"
+                  >
+                    {t({ en: "Close", ar: "إغلاق" } satisfies LocalizedString)}
+                  </button>
+                </div>
               </div>
               <div className="h-full min-h-0 p-2 md:p-4">
                 <iframe
                   title={`${normalized[activeIndex].label} catalog`}
-                  src={`${normalized[activeIndex].file}#page=1&view=FitH`}
+                  src={`${normalized[activeIndex].fileSrc}#page=1&view=FitH`}
                   className="h-full w-full border border-[#DCCBB8] bg-white"
                 />
               </div>

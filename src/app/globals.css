@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -39,7 +40,8 @@
   --destructive: #9d5a4e;
   --font-heading: "Cormorant Garamond";
   --font-body: "Cormorant Garamond";
-  --font-arabic: "Cormorant Garamond";
+  --font-arabic: "Noto Naskh Arabic";
+  --font-arabic-heading: "Noto Naskh Arabic";
 }
 
 @layer base {
@@ -63,12 +65,17 @@
 
   body[data-locale="ar"] {
     font-family: var(--font-arabic), "Segoe UI", Tahoma, sans-serif;
+    letter-spacing: 0;
   }
 
-  html.needle-cursor-active,
-  html.needle-cursor-active body,
-  html.needle-cursor-active * {
-    cursor: none !important;
+  body[data-locale="ar"] h1,
+  body[data-locale="ar"] h2,
+  body[data-locale="ar"] h3,
+  body[data-locale="ar"] h4,
+  body[data-locale="ar"] h5,
+  body[data-locale="ar"] h6 {
+    font-family: var(--font-arabic-heading), "Noto Naskh Arabic", serif;
+    letter-spacing: 0;
   }
 
   h1,
