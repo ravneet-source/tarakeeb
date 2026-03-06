@@ -21,7 +21,7 @@ export default function ContactPage() {
             ar: "لحجوزات التفصيل حسب الطلب، أو التعاونات، أو الطلبات التحريرية، يرجى التواصل مع فريقنا.",
           }}
           as="p"
-          className="text-[#4A4A4A]"
+          className="text-[#1A1A1A]"
         />
         <div className="space-y-3 text-lg">
           <p>

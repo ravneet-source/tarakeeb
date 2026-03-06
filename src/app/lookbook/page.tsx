@@ -26,7 +26,7 @@ export default function LookbookPage() {
             ar: "مجموعة مختارة من إصدارات تركيب. اختَر غلاف الكتالوج لفتح خط الأزياء كاملًا واستعراضه.",
           }}
           as="p"
-          className="mt-5 max-w-full font-serif text-[1.35rem] leading-[1.6] text-[#4A4A4A] italic md:whitespace-nowrap"
+          className="mt-5 max-w-full font-serif text-[1.35rem] leading-[1.6] text-[#1A1A1A] italic md:whitespace-nowrap"
         />
       </SectionReveal>
 

@@ -29,14 +29,14 @@ export default function MadeToOrderPage() {
       <SectionReveal className="outer-padding py-20 md:py-28">
         <div className="mx-auto max-w-[1400px]">
           <LocalizedText text={madeToOrderHero.title} as="h1" className="section-heading max-w-4xl text-[#1A1A1A]" />
-          <LocalizedText text={madeToOrderHero.body} as="p" className="mt-5 max-w-3xl text-xl text-[#4A4A4A]" />
+          <LocalizedText text={madeToOrderHero.body} as="p" className="mt-5 max-w-3xl text-xl text-[#1A1A1A]" />
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {processSteps.map((step) => (
               <article key={step.step} className="border border-[#E5DCD3] p-6">
                 <p className="meta-text">{step.step}</p>
                 <LocalizedText text={step.title} as="h2" className="mt-4 font-serif text-3xl" />
-                <LocalizedText text={step.detail} as="p" className="mt-4 text-[#4A4A4A]" />
+                <LocalizedText text={step.detail} as="p" className="mt-4 text-[#1A1A1A]" />
               </article>
             ))}
           </div>

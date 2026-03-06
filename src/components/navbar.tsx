@@ -78,7 +78,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={toggleLanguage}
-            className="hidden text-xs tracking-[0.18em] uppercase text-[#4A4A4A] transition-colors hover:text-[#1A1A1A] md:block"
+            className="hidden text-xs tracking-[0.18em] uppercase text-[#1A1A1A] transition-colors hover:text-[#1A1A1A] md:block"
             aria-label={locale === "ar" ? "تغيير اللغة" : "Toggle language"}
           >
             <span className={locale === "en" ? "text-[#1A1A1A]" : ""}>EN</span>
@@ -101,7 +101,7 @@ export function Navbar() {
                 <button
                   type="button"
                   onClick={toggleLanguage}
-                  className="self-start text-xs tracking-[0.18em] uppercase text-[#4A4A4A]"
+                  className="self-start text-xs tracking-[0.18em] uppercase text-[#1A1A1A]"
                 >
                   <span className={locale === "en" ? "text-[#1A1A1A]" : ""}>EN</span>
                   <span className="px-2 text-[#CBB8A5]">|</span>

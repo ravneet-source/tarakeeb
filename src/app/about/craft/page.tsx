@@ -20,7 +20,7 @@ export default function CraftPage() {
           as="h1"
           className="section-heading mt-4 max-w-4xl"
         />
-        <LocalizedText text={craftIntro} as="p" className="mt-5 max-w-3xl whitespace-pre-line text-lg text-[#4A4A4A]" />
+        <LocalizedText text={craftIntro} as="p" className="mt-5 max-w-3xl whitespace-pre-line text-lg text-[#1A1A1A]" />
       </SectionReveal>
 
       <div className="mx-auto max-w-[1400px]">

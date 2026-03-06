@@ -30,7 +30,7 @@ export function CraftStoryBlock({ title, text, image, reverse }: CraftStoryBlock
         className="space-y-4"
       >
         <p className="meta-text font-bold">{t(title)}</p>
-        <p className="text-xl text-[#4A4A4A]">{t(text)}</p>
+        <p className="text-xl text-[#1A1A1A]">{t(text)}</p>
       </motion.div>
       <motion.div
         className="relative h-[62vh] min-h-[420px] overflow-hidden border border-[#E5DCD3]"

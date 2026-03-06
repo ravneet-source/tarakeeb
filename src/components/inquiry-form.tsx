@@ -139,7 +139,7 @@ export function InquiryForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-xs tracking-[0.16em] uppercase text-[#4A4A4A]">
+                <FormLabel className="text-xs tracking-[0.16em] uppercase text-[#1A1A1A]">
                   {copy.name}
                 </FormLabel>
                 <FormControl>
@@ -155,7 +155,7 @@ export function InquiryForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-xs tracking-[0.16em] uppercase text-[#4A4A4A]">
+                <FormLabel className="text-xs tracking-[0.16em] uppercase text-[#1A1A1A]">
                   {copy.email}
                 </FormLabel>
                 <FormControl>
@@ -171,7 +171,7 @@ export function InquiryForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-xs tracking-[0.16em] uppercase text-[#4A4A4A]">
+                <FormLabel className="text-xs tracking-[0.16em] uppercase text-[#1A1A1A]">
                   {copy.phone}
                 </FormLabel>
                 <FormControl>
@@ -187,7 +187,7 @@ export function InquiryForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-xs tracking-[0.16em] uppercase text-[#4A4A4A]">
+                <FormLabel className="text-xs tracking-[0.16em] uppercase text-[#1A1A1A]">
                   {copy.message}
                 </FormLabel>
                 <FormControl>
@@ -202,7 +202,7 @@ export function InquiryForm() {
             <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto">
               {isSubmitting ? copy.submitting : copy.submit}
             </Button>
-            {serverMessage ? <p className="text-sm text-[#4A4A4A]">{serverMessage}</p> : null}
+            {serverMessage ? <p className="text-sm text-[#1A1A1A]">{serverMessage}</p> : null}
           </div>
         </form>
       </Form>

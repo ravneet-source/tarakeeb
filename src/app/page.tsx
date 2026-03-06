@@ -87,7 +87,7 @@ export default function HomePage() {
           <LocalizedText
             text={dialogueBlock.subtitle}
             as="p"
-            className="mt-3 font-serif text-xl text-[#4A4A4A] md:text-2xl"
+            className="mt-3 font-serif text-lg text-[#1A1A1A]"
           />
         </div>
       </SectionReveal>
@@ -108,7 +108,7 @@ export default function HomePage() {
             <LocalizedText
               text={introduction.body}
               as="p"
-              className="max-w-xl whitespace-pre-line text-[1.45rem] leading-[1.6] md:text-[1.6rem] text-[#4A4A4A]"
+              className="max-w-xl whitespace-pre-line text-lg leading-[1.6] text-[#1A1A1A]"
             />
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function HomePage() {
             <LocalizedText
               text={introductionReverse.body}
               as="p"
-              className="max-w-xl whitespace-pre-line text-[1.45rem] leading-[1.6] md:text-[1.6rem] text-[#4A4A4A]"
+              className="max-w-xl whitespace-pre-line text-lg leading-[1.6] text-[#1A1A1A]"
             />
           </div>
           <div className="relative h-[60vh] min-h-[420px] overflow-hidden border border-[#E5DCD3]">
@@ -147,7 +147,7 @@ export default function HomePage() {
             as="p"
             className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl"
           />
-          <LocalizedText text={quote} as="p" className="mt-3 font-serif text-xl text-[#4A4A4A] md:text-2xl" />
+          <LocalizedText text={quote} as="p" className="mt-3 font-serif text-lg text-[#1A1A1A]" />
         </div>
       </SectionReveal>
 
@@ -171,7 +171,7 @@ export default function HomePage() {
             <LocalizedText
               text={exclusivity.body}
               as="p"
-              className="max-w-xl whitespace-pre-line text-[1.35rem] text-[#4A4A4A]"
+              className="max-w-xl whitespace-pre-line text-lg text-[#1A1A1A]"
             />
             <Link
               href={exclusivity.cta.href}
@@ -193,7 +193,7 @@ export default function HomePage() {
           <LocalizedText
             text={craftBlock.body}
             as="p"
-            className="mt-3 whitespace-pre-line font-serif text-xl text-[#4A4A4A] md:text-2xl"
+            className="mt-3 whitespace-pre-line font-serif text-lg text-[#1A1A1A]"
           />
         </div>
       </SectionReveal>
@@ -210,7 +210,7 @@ export default function HomePage() {
           <LocalizedText
             text={statementBlock.body}
             as="p"
-            className="mt-3 whitespace-pre-line font-serif text-xl text-[#4A4A4A] md:text-2xl"
+            className="mt-3 whitespace-pre-line font-serif text-lg text-[#1A1A1A]"
           />
         </div>
       </SectionReveal>

@@ -28,7 +28,7 @@ export function FounderContent({ founder }: FounderContentProps) {
         <div className="space-y-5 lg:sticky lg:top-24 lg:self-start">
           <div>
             <LocalizedText text={founder.name} as="p" className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl" />
-            <LocalizedText text={founder.role} as="p" className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#4A4A4A] md:text-base" />
+            <LocalizedText text={founder.role} as="p" className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#1A1A1A] md:text-base" />
           </div>
           <div className="relative h-[74vh] min-h-[500px] overflow-hidden border border-[#E5DCD3] lg:h-[calc(100vh-10rem)]">
             <Image
@@ -43,7 +43,7 @@ export function FounderContent({ founder }: FounderContentProps) {
         </div>
         <div className="space-y-8">
           <div className="flex items-start justify-between gap-6">
-            <p className="font-serif whitespace-pre-line text-lg font-semibold leading-[1.65] text-[#4A4A4A] italic">
+            <p className="font-serif whitespace-pre-line text-lg font-semibold leading-[1.65] text-[#1A1A1A] italic">
               {quoteParagraph}
             </p>
             <div className="relative mt-1 h-16 w-44 shrink-0 md:h-20 md:w-56">
@@ -56,14 +56,14 @@ export function FounderContent({ founder }: FounderContentProps) {
               />
             </div>
           </div>
-          <p className="font-serif whitespace-pre-line text-justify text-lg font-semibold leading-[1.65] text-[#4A4A4A]">
+          <p className="font-serif whitespace-pre-line text-justify text-lg font-semibold leading-[1.65] text-[#1A1A1A]">
             {sideBodyParagraphs}
           </p>
         </div>
       </div>
       <div className="space-y-6 text-center">
-        <p className="font-serif text-lg font-semibold leading-[1.65] text-[#4A4A4A]">{bottomParagraphs[0]}</p>
-        <p className="font-serif text-lg font-bold leading-[1.65] text-[#4A4A4A]">{bottomParagraphs[1]}</p>
+        <p className="font-serif text-lg font-semibold leading-[1.65] text-[#1A1A1A]">{bottomParagraphs[0]}</p>
+        <p className="font-serif text-lg font-bold leading-[1.65] text-[#1A1A1A]">{bottomParagraphs[1]}</p>
       </div>
     </div>
   );

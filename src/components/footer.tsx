@@ -30,7 +30,7 @@ export function Footer() {
         <div className="space-y-3">
           <p className="font-serif text-xl tracking-[0.2em] uppercase">{locale === "ar" ? "تركيب" : "Tarakeeb"}</p>
           <p className="meta-text">{t(inspiredBy)}</p>
-          <p className="max-w-md text-[#4A4A4A]">
+          <p className="max-w-md text-[#1A1A1A]">
             {t(dialogue)}
           </p>
         </div>
@@ -43,12 +43,12 @@ export function Footer() {
           >
             @tarakeeb.official
           </Link>
-          <p className="max-w-lg text-xs leading-6 text-[#4A4A4A] md:ms-auto">
+          <p className="max-w-lg text-xs leading-6 text-[#1A1A1A] md:ms-auto">
             {t(note)}
           </p>
         </div>
       </div>
-      <p className="outer-padding mx-auto mt-10 max-w-[1500px] text-xs tracking-[0.14em] text-[#4A4A4A]">
+      <p className="outer-padding mx-auto mt-10 max-w-[1500px] text-xs tracking-[0.14em] text-[#1A1A1A]">
         © {locale === "ar" ? "تركيب" : "Tarakeeb"} {new Date().getFullYear()}
       </p>
     </footer>

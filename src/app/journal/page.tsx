@@ -26,7 +26,7 @@ export default function JournalPage() {
             ar: "ستضم مجلتنا التحريرية مقالات وملاحظات عملية من عالم تركيب. والقصص الأولى قيد الإعداد حاليًا.",
           }}
           as="p"
-          className="mt-4 max-w-2xl text-[#4A4A4A]"
+          className="mt-4 max-w-2xl text-[#1A1A1A]"
         />
 
         <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -42,7 +42,7 @@ export default function JournalPage() {
                 />
               </div>
               <LocalizedText text={item.title} as="h2" className="font-serif text-2xl" />
-              <Link href="#" className="text-sm uppercase tracking-[0.12em] text-[#4A4A4A]">
+              <Link href="#" className="text-sm uppercase tracking-[0.12em] text-[#1A1A1A]">
                 <LocalizedText text={{ en: "Read more", ar: "اقرأ المزيد" }} />
               </Link>
             </article>

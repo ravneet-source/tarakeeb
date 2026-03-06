@@ -36,7 +36,7 @@ export function HorizontalScroll({ panels }: HorizontalScrollProps) {
               </div>
               <div className="border border-t-0 border-[#E5DCD3] bg-[#FDFBF7] p-5">
                 <p className="meta-text">{t(panel.title)}</p>
-                <p className="mt-2 text-[#4A4A4A]">{t(panel.caption)}</p>
+                <p className="mt-2 text-[#1A1A1A]">{t(panel.caption)}</p>
               </div>
             </article>
           ))}

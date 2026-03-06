@@ -56,7 +56,7 @@ export function LookbookGrid({ items }: LookbookGridProps) {
             ar: "لم تتم إضافة ملفات كتالوج بعد",
           } satisfies LocalizedString)}
         </p>
-        <p className="mt-3 text-lg text-[#4A4A4A]">
+        <p className="mt-3 text-lg text-[#1A1A1A]">
           {t({
             en: "Add PDFs to public/lookbooks, then list them in src/data/lookbook.ts.",
             ar: "أضف ملفات PDF داخل public/lookbooks ثم أدرجها في src/data/lookbook.ts.",

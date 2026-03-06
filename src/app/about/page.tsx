@@ -25,7 +25,7 @@ export default function AboutPage() {
       <SectionReveal className="outer-padding py-20 md:py-28">
         <div className="text-container space-y-8">
           {philosophy.map((paragraph) => (
-            <LocalizedText key={paragraph.en} text={paragraph} as="p" className="text-xl text-[#4A4A4A]" />
+            <LocalizedText key={paragraph.en} text={paragraph} as="p" className="text-xl text-[#1A1A1A]" />
           ))}
         </div>
       </SectionReveal>
