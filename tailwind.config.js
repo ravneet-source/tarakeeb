@@ -14,9 +14,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ["var(--font-playfair)", "Georgia", "serif"],
-        body: ["var(--font-inter)", "Helvetica", "sans-serif"],
-        arabic: ["var(--font-tajawal)", "Tahoma", "sans-serif"],
+        heading: ["var(--font-cormorant)", "Georgia", "serif"],
+        body: ["var(--font-cormorant)", "Helvetica", "sans-serif"],
+        arabic: ["var(--font-noto-arabic)", "Tahoma", "sans-serif"],
       },
       fontSize: {
         hero: "clamp(3rem, 8vw, 6rem)",
