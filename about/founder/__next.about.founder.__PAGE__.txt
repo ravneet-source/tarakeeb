@@ -1,0 +1,45 @@
+1:"$Sreact.fragment"
+2:I[73851,["/_next/static/chunks/2a9f414cd0d31823.js","/_next/static/chunks/c5b69bc6dca836a1.js","/_next/static/chunks/ab6f116401e9bce0.js","/_next/static/chunks/d8607ddb7e76db76.js","/_next/static/chunks/908b899916664655.js"],"SectionReveal"]
+3:I[75923,["/_next/static/chunks/2a9f414cd0d31823.js","/_next/static/chunks/c5b69bc6dca836a1.js","/_next/static/chunks/ab6f116401e9bce0.js","/_next/static/chunks/d8607ddb7e76db76.js","/_next/static/chunks/908b899916664655.js"],"FounderContent"]
+6:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+4:T65a,“Tarakeeb did not begin as a business idea.
+It began as a personal sensibility.”
+
+From a young age, Kanika Subberwal gravitated toward natural fabrics and classical silhouettes — garments that felt enduring rather than seasonal. Clothing, for her, was never about spectacle. It was about ease, proportion, and quiet dignity.
+
+Living in Bahrain for nearly two decades, she became deeply engaged with its artistic landscape — its makers, its cultural spaces, and its layered history. The island’s scale, restraint, and continuity of craft shaped her understanding of design.
+
+In 2019, during an art collaboration that brought Indian designer JJ Valaya to Bahrain, Kanika was introduced to the traditional weaving practices of Bani Jamra. The encounter revealed a lineage of craftsmanship that felt both rooted and expansive — local in origin, yet resonant beyond geography.
+
+A year later, during the stillness of 2020, the idea of Tarakeeb began to take form. With movement paused and choices limited, reflection sharpened intention. The question was not what to produce — but how to create with integrity.
+
+Tarakeeb emerged as a response to that inquiry.
+
+A practice grounded in natural textiles.
+A commitment to hand weaving and embroidery.
+A dialogue between Bahrain and beyond.
+
+Under Kanika’s direction, the brand continues to explore how craft can travel — how fabric woven in one place, sourced in another, and embroidered elsewhere can come together as a cohesive, contemporary garment.
+
+Tarakeeb remains, at its core, an exploration of continuity — of culture, of material, and of considered design.5:T854,«تركيب ما بدأت كفكرة تجارية.
+بدأت كذائقة شخصية.»
+
+من عمر مبكر، كانت كانيكا سوبروال تميل إلى الأقمشة الطبيعية والخطوط الكلاسيكية — قطع تعيش أكثر من موسم. بالنسبة لها، اللباس لم يكن يومًا استعراضًا؛ كان راحة وتناسبًا وكرامة هادئة.
+
+وخلال قرابة عقدين في البحرين، انخرطت بعمق في المشهد الفني — صُنّاعه، ومساحاته الثقافية، وتاريخه المتعدد الطبقات. هذا الإيقاع، مع الرصانة واستمرارية الحرفة في الجزيرة، صاغ فهمها للتصميم.
+
+وفي 2019، أثناء تعاون فني استضاف المصمم الهندي جيه جي فالايا في البحرين، تعرّفت كانيكا على تقاليد الحياكة في بني جمرة. هذا اللقاء كشف لها إرثًا حرفيًا متجذرًا ومحلقًا في الوقت نفسه — محلي المنشأ، واسع الصدى.
+
+وبعد عام، وفي هدوء 2020، بدأت ملامح فكرة تركيب تتشكل. ومع توقف الحركة وضيق الخيارات، أصبح التأمل أكثر وضوحًا. لم يكن السؤال ماذا ننتج، بل كيف نُبدع بنزاهة.
+
+ومن هنا جاءت تركيب كإجابة على هذا السؤال.
+
+ممارسة ترتكز على الأنسجة الطبيعية.
+والتزام بالحياكة والتطريز اليدوي.
+وحوار بين البحرين وما بعدها.
+
+وتحت قيادة كانيكا، تواصل العلامة استكشاف رحلة الحرفة — كيف يمكن لقماش يُنسج في مكان، ويُنتقى من مكان آخر، ويُطرّز في جهة ثالثة أن يجتمع في قطعة معاصرة متماسكة.
+
+وتبقى تركيب، في جوهرها، بحثًا في الاستمرارية — استمرارية الثقافة، والخامة، والتصميم الواعي.0:{"buildId":"iDZmdaU1wu-8cGqL90hGB","rsc":["$","$1","c",{"children":[["$","$L2",null,{"className":"outer-padding py-20 md:py-28","children":["$","$L3",null,{"founder":{"image":"/images/founder-3.jpg","name":{"en":"Kanika Subberwal","ar":"كانيكا سوبروال"},"role":{"en":"Designer Founder","ar":"المصممة والمؤسِّسة"},"story":{"en":"$4","ar":"$5"}}}]}],[["$","script","script-0",{"src":"/_next/static/chunks/908b899916664655.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+8:null
