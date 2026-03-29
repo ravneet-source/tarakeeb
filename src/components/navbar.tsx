@@ -63,6 +63,8 @@ export function Navbar() {
                 ? pathname === item.href
                 : pathname === item.href || pathname.startsWith(`${item.href}/`);
             
+            const ItemTag = item.subItems ? "span" : Link;
+            
             return (
               <div 
                 key={item.href} 
@@ -70,9 +72,12 @@ export function Navbar() {
                 onMouseEnter={() => item.subItems && setActiveDropdown(item.href)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <Link
+                <ItemTag
                   href={item.href}
-                  className="relative py-1 text-sm tracking-[0.08em] uppercase text-[#1A1A1A]"
+                  className={cn(
+                    "relative py-1 text-sm tracking-[0.08em] uppercase text-[#1A1A1A]",
+                    item.subItems && "cursor-default"
+                  )}
                 >
                   {t(item.label)}
                   <AnimatePresence mode="wait">
@@ -83,7 +88,7 @@ export function Navbar() {
                       />
                     ) : null}
                   </AnimatePresence>
-                </Link>
+                </ItemTag>
 
                 {item.subItems && (
                   <AnimatePresence>
@@ -146,15 +151,20 @@ export function Navbar() {
                   <span className={locale === "ar" ? "text-[#1A1A1A]" : ""}>AR</span>
                 </button>
 
-                {menuItems.map((item) => (
-                  <div key={item.href} className="flex flex-col gap-2">
-                    <Link
+                {menuItems.map((item) => {
+                  const ItemTag = item.subItems ? "span" : Link;
+                  return (
+                    <div key={item.href} className="flex flex-col gap-2">
+                    <ItemTag
                       href={item.href}
-                      className="border-b border-[#E5DCD3] pb-3 font-serif text-2xl tracking-[0.06em]"
+                      className={cn(
+                        "border-b border-[#E5DCD3] pb-3 font-serif text-2xl tracking-[0.06em]",
+                        item.subItems && "cursor-default text-[#1A1A1A]"
+                      )}
                       onClick={() => !item.subItems && setIsMenuOpen(false)}
                     >
                       {t(item.label)}
-                    </Link>
+                    </ItemTag>
                     {item.subItems && (
                       <div className="flex flex-col gap-3 pl-4">
                         {item.subItems.map((sub) => (
@@ -169,8 +179,9 @@ export function Navbar() {
                         ))}
                       </div>
                     )}
-                  </div>
-                ))}
+                    </div>
+                  );
+                })}
               </div>
             </SheetContent>
           </Sheet>
