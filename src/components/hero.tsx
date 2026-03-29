@@ -10,6 +10,8 @@ type HeroProps = {
     video?: string;
     poster: string;
     headline?: string;
+    subtextLines?: string[];
+    subtextLinesAr?: string[];
   };
 };
 
@@ -18,6 +20,8 @@ export function Hero({ data }: HeroProps) {
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 700], [1.08, 1]);
   const [videoFailed, setVideoFailed] = useState(false);
+
+  const linesToRender = locale === "ar" && data.subtextLinesAr ? data.subtextLinesAr : data.subtextLines;
 
   return (
     <section className="full-bleed relative isolate h-[92vh] min-h-[620px] overflow-hidden">
@@ -48,9 +52,20 @@ export function Hero({ data }: HeroProps) {
 
       <div className="absolute inset-0 bg-gradient-to-t from-[rgba(20,16,13,0.75)] via-[rgba(20,16,13,0.28)] to-[rgba(20,16,13,0.15)]" />
 
-      {data.headline ? (
-        <div className="outer-padding relative z-10 mx-auto flex h-full max-w-[1500px] items-center justify-center text-center">
-          <h1 className="hero-heading max-w-5xl text-[#F6EFE6]">{data.headline}</h1>
+      {(data.headline || linesToRender) ? (
+        <div className="outer-padding relative z-10 mx-auto flex h-full max-w-[1500px] flex-col items-center justify-center text-center pt-32 md:pt-48">
+          {data.headline ? (
+            <h1 className="hero-heading max-w-5xl text-[#F6EFE6]">{data.headline}</h1>
+          ) : null}
+          {linesToRender ? (
+            <p className="flex flex-col items-center gap-1 font-heading text-5xl md:text-7xl text-[#E5DCD3] tracking-wide drop-shadow-2xl">
+              {linesToRender.map((line, i) => (
+                <span key={i} className="leading-tight">
+                  {line}
+                </span>
+              ))}
+            </p>
+          ) : null}
         </div>
       ) : null}
 

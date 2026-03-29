@@ -43,32 +43,31 @@ const craftBlock = {
     ar: "حرفتنا",
   } satisfies LocalizedString,
   body: {
-    en: `Woven in Bahrain.
-Sourced with integrity.
-Embroidered by hand.
+    en: `"Woven in Bahrain, embroidered by hand, sourced with Integrity "
 
-"What Begins in one place is enriched in another.
-The Result is a garment that feels international, yet deeply grounded."`,
-    ar: `منسوج في البحرين.
-منتقى بنزاهة.
-ومطرّز يدويًا.
+The garment travels a journey across borders from sourcing to enhancing and then completion.
+The result is an international ensemble, deep-rooted in legacy.`,
+    ar: `"منسوج في البحرين، مطرّز يدوياً، ومنتقى بنزاهة"
 
-ما يبدأ في مكان يزداد قيمة في مكان آخر.
-والنتيجة قطعة بروح عالمية وجذور راسخة.`,
+يسافر الثوب في رحلة عبر الحدود من الانتقاء إلى التطوير ثم الاكتمال.
+والنتيجة قطعة بروح عالمية، وجذور راسخة في الإرث.`,
   } satisfies LocalizedString,
 };
 
 const statementBlock = {
   title: {
-    en: "Tarakeeb is a Quiet Statement",
-    ar: "تركيب رسالة هادئة —",
+    en: "Our Ethos",
+    ar: "فلسفتنا",
   } satisfies LocalizedString,
   body: {
-    en: `"Elegance need not be loud, and heritage deserves continuity.
-True luxury is found in restraint."`,
-    ar: `أن الأناقة لا تحتاج صخبًا،
-وأن الإرث يستحق الاستمرارية،
-وأن الفخامة الحقيقية تكمن في الرصانة.`,
+    en: `At Tarakeeb we believe 
+Elegance does not need sound 
+Heritage deserves continuity and 
+"True luxury lies in restraint "`,
+    ar: `في تركيب نؤمن أن
+الأناقة لا تحتاج صخبًا،
+والإرث يستحق الاستمرارية،
+"وأن الفخامة الحقيقية تكمن في الرصانة"`,
   } satisfies LocalizedString,
 };
 

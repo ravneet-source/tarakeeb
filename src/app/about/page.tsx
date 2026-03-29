@@ -32,7 +32,7 @@ export default function AboutPage() {
 
       <SectionReveal className="outer-padding pb-20 md:pb-28">
         <blockquote className="text-container border-s border-[#CBB8A5] ps-6 font-serif text-3xl leading-tight md:text-5xl">
-          <LocalizedText text={aboutQuote} />
+          <LocalizedText text={aboutQuote} preserveLines />
         </blockquote>
       </SectionReveal>
 

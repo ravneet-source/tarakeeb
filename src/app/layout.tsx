@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://tarakeeb.vercel.app"),
   title: {
     default: "Tarakeeb | A Dialogue in Fabric",
-    template: "%s | Tarakeeb",
+    template: "Tarakeeb | %s",
   },
   description:
     "Luxury artisanal clothing from Bahrain. Tarakeeb presents a digital lookbook of craftsmanship, heritage, and limited-edition collections.",

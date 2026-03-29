@@ -42,11 +42,11 @@ export function FounderContent({ founder }: FounderContentProps) {
           </div>
         </div>
         <div className="space-y-8">
-          <div className="flex items-start justify-between gap-6">
-            <p className="font-serif whitespace-pre-line text-lg font-semibold leading-[1.65] text-[#1A1A1A] italic">
+          <div className="flex flex-col items-end gap-6">
+            <p className="w-full font-serif text-lg font-semibold leading-[1.65] text-[#1A1A1A] italic">
               {quoteParagraph}
             </p>
-            <div className="relative mt-1 h-16 w-44 shrink-0 md:h-20 md:w-56">
+            <div className="relative mt-1 h-16 w-44 shrink-0 self-end md:h-20 md:w-56">
               <Image
                 src="/images/kanika-signature.png"
                 alt={t({ en: "Kanika Subberwal signature", ar: "توقيع كانيكا سوبروال" })}

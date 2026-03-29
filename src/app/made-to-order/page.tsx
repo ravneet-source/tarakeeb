@@ -21,7 +21,7 @@ export default function MadeToOrderPage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[80%_center]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(20,16,13,0.62)] to-[rgba(20,16,13,0.24)]" />
       </section>

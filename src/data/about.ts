@@ -20,8 +20,10 @@ export const philosophy = [
 ];
 
 export const aboutQuote = {
-  en: "Tarakeeb is not designed for noise. It is designed for memory, movement, and meaning.",
-  ar: "تركيب لا تُصمَّم للضجيج، بل للذاكرة والحركة والمعنى.",
+  en: `Tarakeeb is not designed for noise
+It is designed for memory, movement, and meaning.`,
+  ar: `تركيب لا تُصمَّم للضجيج
+بل للذاكرة والحركة والمعنى.`,
 } satisfies LocalizedString;
 
 export const founder = {
@@ -35,22 +37,21 @@ export const founder = {
     ar: "المصممة والمؤسِّسة",
   } satisfies LocalizedString,
   story: {
-    en: `“Tarakeeb did not begin as a business idea.
-It began as a personal sensibility.”
+    en: `“Tarakeeb did not begin as a business idea. It began as a personal sensibility.”
 
 From a young age, Kanika Subberwal gravitated toward natural fabrics and classical silhouettes — garments that felt enduring rather than seasonal. Clothing, for her, was never about spectacle. It was about ease, proportion, and quiet dignity.
 
 Living in Bahrain for nearly two decades, she became deeply engaged with its artistic landscape — its makers, its cultural spaces, and its layered history. The island’s scale, restraint, and continuity of craft shaped her understanding of design.
 
-In 2019, during an art collaboration that brought Indian designer JJ Valaya to Bahrain, Kanika was introduced to the traditional weaving practices of Bani Jamra. The encounter revealed a lineage of craftsmanship that felt both rooted and expansive — local in origin, yet resonant beyond geography.
+In 2019, during an art collaboration that brought Indian designer JJ Valaya to Bahrain, Kanika was introduced to the traditional weaving practices of Bani Jamra - a village in Bahrain. The encounter revealed a lineage of craftsmanship that felt both rooted and expansive — local in origin, yet resonant beyond geography.
 
 A year later, during the stillness of 2020, the idea of Tarakeeb began to take form. With movement paused and choices limited, reflection sharpened intention. The question was not what to produce — but how to create with integrity.
 
 Tarakeeb emerged as a response to that inquiry.
 
-A practice grounded in natural textiles.
+“A practice grounded in natural textiles.
 A commitment to hand weaving and embroidery.
-A dialogue between Bahrain and beyond.
+A dialogue between Bahrain and beyond.”
 
 Under Kanika’s direction, the brand continues to explore how craft can travel — how fabric woven in one place, sourced in another, and embroidered elsewhere can come together as a cohesive, contemporary garment.
 
@@ -62,7 +63,7 @@ Tarakeeb remains, at its core, an exploration of continuity — of culture, of m
 
 وخلال قرابة عقدين في البحرين، انخرطت بعمق في المشهد الفني — صُنّاعه، ومساحاته الثقافية، وتاريخه المتعدد الطبقات. هذا الإيقاع، مع الرصانة واستمرارية الحرفة في الجزيرة، صاغ فهمها للتصميم.
 
-وفي 2019، أثناء تعاون فني استضاف المصمم الهندي جيه جي فالايا في البحرين، تعرّفت كانيكا على تقاليد الحياكة في بني جمرة. هذا اللقاء كشف لها إرثًا حرفيًا متجذرًا ومحلقًا في الوقت نفسه — محلي المنشأ، واسع الصدى.
+وفي 2019، أثناء تعاون فني استضاف المصمم الهندي جيه جي فالايا في البحرين، تعرّفت كانيكا على تقاليد الحياكة في بني جمرة - قرية في البحرين. هذا اللقاء كشف لها إرثًا حرفيًا متجذرًا ومحلقًا في الوقت نفسه — محلي المنشأ، واسع الصدى.
 
 وبعد عام، وفي هدوء 2020، بدأت ملامح فكرة تركيب تتشكل. ومع توقف الحركة وضيق الخيارات، أصبح التأمل أكثر وضوحًا. لم يكن السؤال ماذا ننتج، بل كيف نُبدع بنزاهة.
 
@@ -79,13 +80,13 @@ Tarakeeb remains, at its core, an exploration of continuity — of culture, of m
 };
 
 export const craftIntro = {
-  en: `At Tarakeeb, design begins with material discipline.
+  en: `“At Tarakeeb design meets with material discipline” KS
 
 Only natural textiles are considered. Fabric is selected for integrity, breathability, and longevity — for how it holds form, how it moves, how it ages.
 
 The garment is shaped around the textile.
 Not the other way around.`,
-  ar: `في تركيب، التصميم يبدأ بانضباط المادة.
+  ar: `«في تركيب، يلتقي التصميم مع انضباط المادة» KS
 
 لا نعتمد إلا الأنسجة الطبيعية. يتم اختيار القماش وفق متانته، وتهويته، وطول عمره — كيف يحافظ على الخط، وكيف يتحرك، وكيف يشيخ بكرامة.
 
@@ -100,8 +101,8 @@ export const craftNarrative = [
       ar: "حياكة بني جمرة",
     } satisfies LocalizedString,
     text: {
-      en: "In Bani Jamra, hand-weaving is approached with discipline and continuity. Tarakeeb works with local craftspeople to adapt traditional methods for modern silhouettes while preserving the soul of the weave.",
-      ar: "في بني جمرة، تُمارس الحياكة اليدوية بانضباط واستمرارية. وتعمل تركيب مع الحرفيين المحليين لتطوير التقنيات التقليدية بما يناسب الخطوط الحديثة مع الحفاظ على روح النسيج.",
+      en: "In Bani Jamra, hand-weaving is approached with discipline and continuity. Our team works with local craftspeople to adapt traditional methods for modern silhouettes while preserving the soul of the weave.",
+      ar: "في بني جمرة، تُمارس الحياكة اليدوية بانضباط واستمرارية. ويعمل فريقنا مع الحرفيين المحليين لتطوير التقنيات التقليدية بما يناسب الخطوط الحديثة مع الحفاظ على روح النسيج.",
     } satisfies LocalizedString,
     image: "/images/craft-bani-12.png",
   },

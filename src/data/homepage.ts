@@ -1,14 +1,24 @@
 import type { LocalizedString } from "@/lib/i18n";
 
 export const hero = {
-  poster: "/images/hero-13-new.png",
+  poster: "/images/12.png",
   headline: "",
+  subtextLines: [
+    `"A Dialogue in Fabric "`,
+    `Conceived in Bahrain,`,
+    `Crafted across Borders`
+  ],
+  subtextLinesAr: [
+    `"حوار في النسيج"`,
+    `وُلد في البحرين،`,
+    `وتشكّل عبر الحدود`
+  ],
 };
 
 export const introduction = {
   image: "/images/intro-man-15.png",
   heading: {
-    en: "“There are garments that follow trends. And there are garments that carry memory.”",
+    en: `“There are garments that follow trends, at Tarakeeb garments carry memory ” KS`,
     ar: "«فيه أزياء تتبع الموجة، وفيه أزياء تحمل الذاكرة.»",
   } satisfies LocalizedString,
   body: {
@@ -24,10 +34,8 @@ Each piece begins with pure textiles and evolves through hand weaving and hand e
 export const introductionReverse = {
   image: "/images/frame-16.png",
   heading: {
-    en: `“Tarakeeb is not simply about design.
-It is about dialogue.”`,
-    ar: `«تركيب ليست مجرد تصميم.
-إنها حوار.»`,
+    en: `“Tarakeeb is not only about design, It is an artisanal dialogue ” KS`,
+    ar: `«تركيب ليست مجرد تصميم، إنها حوار حرفي» KS`,
   } satisfies LocalizedString,
   body: {
     en: `Between craft and culture.
@@ -83,16 +91,8 @@ export const quote = {
 export const exclusivity = {
   image: "/images/exclusivity-1221.png",
   body: {
-    en: `Ready-to-wear pieces are released in limited numbers — no more than three per design and colour — preserving exclusivity and personal connection.
-
-Select collections are entirely hand embroidered and created as singular works.
-
-Made-to-order allows each garment to be shaped with care, ensuring individuality remains at the heart of every creation.`,
-    ar: `تُطرح قطع الجاهز بأعداد محدودة — بحد أقصى ثلاث قطع لكل تصميم ولون — للحفاظ على الخصوصية والارتباط الشخصي.
-
-بعض المجموعات تُنفذ بالكامل بتطريز يدوي وتُقدّم كقطع فريدة.
-
-وخدمة التفصيل حسب الطلب تمنح كل قطعة عناية خاصة، لتبقى الفردية في قلب كل إبداع.`,
+    en: "",
+    ar: "",
   } satisfies LocalizedString,
   cta: {
     label: {
