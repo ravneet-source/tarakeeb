@@ -23,12 +23,12 @@ export const metadata: Metadata = {
 
 const dialogueBlock = {
   title: {
-    en: "A Dialogue in Fabric",
-    ar: "حوار في النسيج",
+    en: "There are garments that follow trends",
+    ar: "هناك أزياء تتبع الصيحات",
   } satisfies LocalizedString,
   subtitle: {
-    en: "Conceived in Bahrain, Crafted Across Cultures.",
-    ar: "وُلد في البحرين، وتشكّل عبر ثقافات متعددة.",
+    en: "And there are garments that carry memory.",
+    ar: "وهناك أزياء تحمل الذاكرة.",
   } satisfies LocalizedString,
 };
 
@@ -77,16 +77,16 @@ export default function HomePage() {
       <Hero data={hero} />
 
       <SectionReveal className="full-bleed">
-        <div className="w-full bg-[#DBC2AD] px-4 py-[3.25rem] text-center md:px-8 md:py-[3.9rem]">
+        <div className="w-full bg-[#DBC2AD] flex flex-col items-center justify-center px-4 py-16 md:px-8 md:py-24">
           <LocalizedText
             text={dialogueBlock.title}
             as="p"
-            className="font-serif text-4xl font-semibold leading-tight text-[#1A1A1A] md:text-5xl"
+            className="font-serif text-3xl md:text-5xl font-semibold leading-tight text-[#1A1A1A]"
           />
           <LocalizedText
             text={dialogueBlock.subtitle}
             as="p"
-            className="mt-3 font-serif text-lg text-[#1A1A1A]"
+            className="mt-2 font-serif text-3xl md:text-5xl font-semibold leading-tight text-[#1A1A1A]"
           />
         </div>
       </SectionReveal>

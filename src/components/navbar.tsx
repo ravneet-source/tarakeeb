@@ -16,6 +16,13 @@ const menuItems = [
   { label: { en: "Home", ar: "الرئيسية" } satisfies LocalizedString, href: "/" },
   { label: { en: "About", ar: "عن تركيب" } satisfies LocalizedString, href: "/about" },
   { label: { en: "Lookbook", ar: "الكتالوج" } satisfies LocalizedString, href: "/lookbook" },
+  { 
+    label: { en: "Our Brands", ar: "علاماتنا التجارية" } satisfies LocalizedString, 
+    href: "/brands",
+    subItems: [
+      { label: { en: "Amira", ar: "أميرة" } satisfies LocalizedString, href: "/brands/amira" }
+    ]
+  },
   { label: { en: "Made-to-Order", ar: "تفصيل حسب الطلب" } satisfies LocalizedString, href: "/made-to-order" },
   { label: { en: "Contact", ar: "تواصل معنا" } satisfies LocalizedString, href: "/contact" },
 ];
@@ -26,6 +33,7 @@ export function Navbar() {
   const t = useLocaleText();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 16);
@@ -48,28 +56,58 @@ export function Navbar() {
           {locale === "ar" ? "تركيب" : "Tarakeeb"}
         </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-8 md:flex h-full">
           {menuItems.map((item) => {
             const isActive =
               item.href === "/"
                 ? pathname === item.href
                 : pathname === item.href || pathname.startsWith(`${item.href}/`);
+            
             return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="relative py-1 text-sm tracking-[0.08em] uppercase text-[#1A1A1A]"
+              <div 
+                key={item.href} 
+                className="relative flex h-full items-center"
+                onMouseEnter={() => item.subItems && setActiveDropdown(item.href)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                {t(item.label)}
-                <AnimatePresence mode="wait">
-                  {isActive ? (
-                    <motion.span
-                      layoutId="nav-active"
-                      className="absolute inset-x-0 -bottom-0.5 h-px bg-[#CBB8A5]"
-                    />
-                  ) : null}
-                </AnimatePresence>
-              </Link>
+                <Link
+                  href={item.href}
+                  className="relative py-1 text-sm tracking-[0.08em] uppercase text-[#1A1A1A]"
+                >
+                  {t(item.label)}
+                  <AnimatePresence mode="wait">
+                    {isActive ? (
+                      <motion.span
+                        layoutId="nav-active"
+                        className="absolute inset-x-0 -bottom-0.5 h-px bg-[#CBB8A5]"
+                      />
+                    ) : null}
+                  </AnimatePresence>
+                </Link>
+
+                {item.subItems && (
+                  <AnimatePresence>
+                    {activeDropdown === item.href && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 mt-0 w-48 border border-[#E5DCD3] bg-[#FDFBF7] p-2 shadow-lg"
+                      >
+                        {item.subItems.map((sub) => (
+                          <Link
+                            key={sub.href}
+                            href={sub.href}
+                            className="block w-full p-3 text-xs tracking-[0.1em] uppercase text-[#1A1A1A] transition-colors hover:bg-[#F6EFE6]"
+                          >
+                            {t(sub.label)}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
             );
           })}
         </div>
@@ -109,14 +147,29 @@ export function Navbar() {
                 </button>
 
                 {menuItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="border-b border-[#E5DCD3] pb-3 font-serif text-2xl tracking-[0.06em]"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {t(item.label)}
-                  </Link>
+                  <div key={item.href} className="flex flex-col gap-2">
+                    <Link
+                      href={item.href}
+                      className="border-b border-[#E5DCD3] pb-3 font-serif text-2xl tracking-[0.06em]"
+                      onClick={() => !item.subItems && setIsMenuOpen(false)}
+                    >
+                      {t(item.label)}
+                    </Link>
+                    {item.subItems && (
+                      <div className="flex flex-col gap-3 pl-4">
+                        {item.subItems.map((sub) => (
+                          <Link
+                            key={sub.href}
+                            href={sub.href}
+                            className="font-serif text-xl italic tracking-[0.04em] text-[#1A1A1A]/70"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {t(sub.label)}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             </SheetContent>
