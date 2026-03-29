@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[73851,["/_next/static/chunks/2a9f414cd0d31823.js","/_next/static/chunks/c5b69bc6dca836a1.js","/_next/static/chunks/ab6f116401e9bce0.js","/_next/static/chunks/d8607ddb7e76db76.js","/_next/static/chunks/b5bd3d410e5cd677.js"],"SectionReveal"]
-3:I[75923,["/_next/static/chunks/2a9f414cd0d31823.js","/_next/static/chunks/c5b69bc6dca836a1.js","/_next/static/chunks/ab6f116401e9bce0.js","/_next/static/chunks/d8607ddb7e76db76.js","/_next/static/chunks/b5bd3d410e5cd677.js"],"FounderContent"]
+2:I[73851,["/_next/static/chunks/2a9f414cd0d31823.js","/_next/static/chunks/c5b69bc6dca836a1.js","/_next/static/chunks/ab6f116401e9bce0.js","/_next/static/chunks/b2dc6f6103efc872.js","/_next/static/chunks/b5bd3d410e5cd677.js"],"SectionReveal"]
+3:I[75923,["/_next/static/chunks/2a9f414cd0d31823.js","/_next/static/chunks/c5b69bc6dca836a1.js","/_next/static/chunks/ab6f116401e9bce0.js","/_next/static/chunks/b2dc6f6103efc872.js","/_next/static/chunks/b5bd3d410e5cd677.js"],"FounderContent"]
 6:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 4:T677,“Tarakeeb did not begin as a business idea. It began as a personal sensibility.”
@@ -40,5 +40,5 @@ Tarakeeb remains, at its core, an exploration of continuity — of culture, of m
 
 وتحت قيادة كانيكا، تواصل العلامة استكشاف رحلة الحرفة — كيف يمكن لقماش يُنسج في مكان، ويُنتقى من مكان آخر، ويُطرّز في جهة ثالثة أن يجتمع في قطعة معاصرة متماسكة.
 
-وتبقى تركيب، في جوهرها، بحثًا في الاستمرارية — استمرارية الثقافة، والخامة، والتصميم الواعي.0:{"buildId":"RGZlRvR0uQeKJ7esnEEJc","rsc":["$","$1","c",{"children":[["$","$L2",null,{"className":"outer-padding py-20 md:py-28","children":["$","$L3",null,{"founder":{"image":"/images/founder-3.jpg","name":{"en":"Kanika Subberwal","ar":"كانيكا سوبروال"},"role":{"en":"Designer Founder","ar":"المصممة والمؤسِّسة"},"story":{"en":"$4","ar":"$5"}}}]}],[["$","script","script-0",{"src":"/_next/static/chunks/b5bd3d410e5cd677.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+وتبقى تركيب، في جوهرها، بحثًا في الاستمرارية — استمرارية الثقافة، والخامة، والتصميم الواعي.0:{"buildId":"X8ek3ID6JkEOFZzLHzynY","rsc":["$","$1","c",{"children":[["$","$L2",null,{"className":"outer-padding py-20 md:py-28","children":["$","$L3",null,{"founder":{"image":"/images/founder-3.jpg","name":{"en":"Kanika Subberwal","ar":"كانيكا سوبروال"},"role":{"en":"Designer Founder","ar":"المصممة والمؤسِّسة"},"story":{"en":"$4","ar":"$5"}}}]}],[["$","script","script-0",{"src":"/_next/static/chunks/b5bd3d410e5cd677.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
 8:null
