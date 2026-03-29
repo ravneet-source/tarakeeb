@@ -81,12 +81,12 @@ export default function HomePage() {
           <LocalizedText
             text={dialogueBlock.title}
             as="p"
-            className="font-serif text-3xl md:text-5xl font-semibold leading-tight text-[#1A1A1A]"
+            className="font-serif text-2xl md:text-4xl font-semibold leading-tight text-[#1A1A1A]"
           />
           <LocalizedText
             text={dialogueBlock.subtitle}
             as="p"
-            className="mt-2 font-serif text-3xl md:text-5xl font-semibold leading-tight text-[#1A1A1A]"
+            className="mt-1 font-serif text-2xl md:text-4xl font-semibold leading-tight text-[#1A1A1A]"
           />
         </div>
       </SectionReveal>
